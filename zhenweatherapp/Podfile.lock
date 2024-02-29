@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.8.1)
+  - PinLayout (1.10.5)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - PinLayout
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - PinLayout
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  PinLayout: f6c2b63a5a5b24864064e1d15c67de41b4e74748
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 0e36584ed20e701a55f2e84677db2070175c8915
+
+COCOAPODS: 1.14.3
