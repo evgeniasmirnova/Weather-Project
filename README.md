@@ -2,9 +2,9 @@
 Клиент-серверное приложение на основе OpenWeatherMap API для отслеживания погоды.
 
 ## Содержание
-- Технологии
--  Начало работы
--  Возможности
+- [Технологии](https://github.com/evgeniasmirnova/WeatherProject/tree/main?tab=readme-ov-file#содержание)
+-  [Начало работы](https://github.com/evgeniasmirnova/WeatherProject/tree/main?tab=readme-ov-file#начало-работы)
+-  [Возможности](https://github.com/evgeniasmirnova/WeatherProject/tree/main?tab=readme-ov-file#возможности)
 
 ## Технологии
 - UIKit
