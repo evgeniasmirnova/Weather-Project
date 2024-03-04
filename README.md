@@ -23,8 +23,13 @@ git clone git@github.com:evgeniasmirnova/WeatherProject.git
 
 ## Возможности
 
-<img src="ReadMeAssets/detailScreen.gif" width="187" height="406"/> <img src="ReadMeAssets/santiagoDetail.png" width="187" height="406" hspace="20"/> <img src="ReadMeAssets/moscowDetail.png" width="187" height="406"/> 
 
-### Экран детальной информации о погоде. 
+### Главный экран
+На данном экране присутствует список избранных городов (по умолчанию их четыре: Канны, Киото, Москва и Ярославль), в которых пользователь хочет отслеживать погоду, их локальное время и основная информация о состоянии погоды. 
+Список сохраняется даже после перезапуска, сбрасывается только при удалении приложения. Предусмотрено удаление и добавление новых городов.
+
+### Экран детальной информации о погоде 
 Здесь отображена информация о погоде на 5 дней, ощущение температуры, скорость ветра, влажность, облачность. 
 Для удобства название города и время в его часовом поясе закрепляется при скролле — так вы их не потеряете.
+
+<img src="ReadMeAssets/detailScreen.gif" width="187" height="406"/> <img src="ReadMeAssets/santiagoDetail.png" width="187" height="406" hspace="20"/> <img src="ReadMeAssets/moscowDetail.png" width="187" height="406"/> 
