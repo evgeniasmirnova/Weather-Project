@@ -67,7 +67,13 @@ class CityListPresenter {
         if cityName.isEmpty {
             view?.display(viewModel: cityNames)
         } else {
-            filteredCityNames = cityNames.filter { $0.name.contains(cityName) }
+            filteredCityNames = cityNames.filter { city in
+                if city.name.lowercased().contains(cityName.lowercased()) {
+                    return true
+                } else {
+                    return false
+                }
+            }
             view?.display(viewModel: filteredCityNames)
         }
     }

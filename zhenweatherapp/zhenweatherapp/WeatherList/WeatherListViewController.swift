@@ -44,27 +44,17 @@ class WeatherListViewController: UIViewController, ViewProtocol {
     private lazy var addButtonImage = UIImage(named: "addButtonImage")
     private var tableViewIdentifier = "myCell"
     private var currentWeatherArray: [CurrentWeather]?
-    private var timer: Timer?
     
 
     // MARK: - Override methods
-    
-    deinit {
-        timer?.invalidate()
-    }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewDidLoadView?()
         setupViews()
-        
-        timer = Timer.scheduledTimer(timeInterval: 1, 
-                                     target: self,
-                                     selector: #selector(didTimerUpdated),
-                                     userInfo: nil,
-                                     repeats: true)
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -133,10 +123,6 @@ class WeatherListViewController: UIViewController, ViewProtocol {
         didTapPlusButton?()
     }
     
-    @objc
-    private func didTimerUpdated() {
-        weatherListTableView.reloadData()
-    }
 }
 
 

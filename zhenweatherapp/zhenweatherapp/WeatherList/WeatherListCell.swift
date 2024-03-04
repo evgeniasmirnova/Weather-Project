@@ -19,6 +19,7 @@ class WeatherListCell: UITableViewCell {
         static let cityNameLabelSize: CGSize = CGSize(width: 200, height: 30)
         static let temperatureLabelSize: CGSize = CGSize(width: 70, height: 40)
         static let iconImageViewSize: CGSize = CGSize(width: 50, height: 50)
+        static let timeLabelSize: CGSize = CGSize(width: 45, height: 17)
     }
     
     
@@ -27,6 +28,7 @@ class WeatherListCell: UITableViewCell {
     var name: String?
     
     private var timeZone: TimeZone?
+    private var timer: Timer?
     
     
     // MARK: - Properties
@@ -105,7 +107,7 @@ class WeatherListCell: UITableViewCell {
         timeLabel.pin
             .below(of: cityNameLabel)
             .left(Constants.leftRightOffset)
-            .sizeToFit()
+            .size(Constants.timeLabelSize)
     }
     
     
@@ -118,6 +120,15 @@ class WeatherListCell: UITableViewCell {
 
         let formattedDate = dateFormatter.string(from: Date())
         timeLabel.text = formattedDate
+    }
+    
+    @objc
+    private func didTimerUpdated() {
+        guard let timeZone else {
+            return
+        }
+        
+        updateTimeLabel(with: timeZone)
     }
     
     func config(viewModel: Model) {
@@ -154,9 +165,17 @@ class WeatherListCell: UITableViewCell {
         
         timeLabel.font = .boldSystemFont(ofSize: Constants.timeLabelFontSize)
         
-        if let timeZone = TimeZone(secondsFromGMT: viewModel.timeZoneSeconds) {
+        timeZone = TimeZone(secondsFromGMT: viewModel.timeZoneSeconds)
+        
+        if let timeZone {
             updateTimeLabel(with: timeZone)
         }
+        
+        timer = Timer.scheduledTimer(timeInterval: 1,
+                                     target: self,
+                                     selector: #selector(didTimerUpdated),
+                                     userInfo: nil,
+                                     repeats: true)
     }
     
 }
