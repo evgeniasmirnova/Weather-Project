@@ -23,7 +23,7 @@ git clone git@github.com:evgeniasmirnova/WeatherProject.git
 
 ## Возможности
 
-<img src="ReadMeAssets/detailScreen.gif" width="187" height="406"/>
+<img src="ReadMeAssets/detailScreen.gif" width="187" height="406"/> <img src="ReadMeAssets/santiagoDetail.png" width="187" height="406" hspace="20"/> <img src="ReadMeAssets/moscowDetail.png" width="187" height="406"/> 
 
 ### Экран детальной информации о погоде. 
 Здесь отображена информация о погоде на 5 дней, ощущение температуры, скорость ветра, влажность, облачность. 
