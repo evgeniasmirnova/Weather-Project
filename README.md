@@ -12,6 +12,7 @@
 - SnapKit
 - PinLayout
 - GCD
+- UserDefaults
 - Architecture: VIPER
 
 ## Начало работы
